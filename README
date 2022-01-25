@@ -1,0 +1,24 @@
+Compile:
+	g++ Main.cpp -std=c++17 -o prime_encode
+
+Parameters:
+	Parameters that influence the same setting: the last one counts (e.g. [prime_encode ... -d -e] means it will encode, and [prime_encode ... -e -d] means it will decode)
+-i : inputfile
+-o : outputfile
+-e : encode
+-d : decode
+-a : encode/decode ascii
+
+Examples:
+
+Encode (binary):
+	./prime_encode -i test.txt -o test.bpe -e
+
+Decode (binary):
+	./prime_encode -i test.bpe -o test_out.txt -d
+
+Encode (ascii):
+	./prime_encode -i test.txt -o test.ape -e -a
+
+Decode (ascii):
+	./prime_encode -i test.ape -o test_out.txt -d -a
